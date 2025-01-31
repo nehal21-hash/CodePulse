@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <!-- Navbar (Example) -->
+  <nav class="bg-blue-600 p-4 text-white">
+    <div class="container mx-auto">
+      <h1 class="text-2xl font-bold">CodePulse</h1>
+    </div>
+  </nav>
+
+  <!-- Login Form Section -->
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+      <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+      <form method="POST" action = '/accounts/login/'>
+        {% csrf_token %}
+        <!-- Email Input -->
+        <div class="mb-4">
+          <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter Your Username"
+            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            name= 'username'
+          />
+        </div>
+
+        <!-- Password Input -->
+        <div class="mb-6">
+          <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            name= 'password'
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          Login
+        </button>
+
+        <!-- Signup Link -->
+        <p class="mt-4 text-center text-gray-600">
+          Don't have an account? <a href="/accounts/register" class="text-blue-600 hover:underline">Sign up</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer (Example) -->
+  <footer class="bg-gray-800 p-4 text-white text-center">
+    <p>&copy; 2023 My Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>
