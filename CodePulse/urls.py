@@ -23,5 +23,6 @@ urlpatterns = [
     path('',views.Home,name='home'),
     path('codeforces/',include('Codeforces.urls')),
     path('accounts/',include('accounts.urls')),
+    path('prediction/',include('Predictions.urls')),
 
 ]

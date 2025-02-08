@@ -36,7 +36,7 @@ ALLOWED_HOSTS = []
 AUTH_USER_MODEL = 'accounts.CpUser'
 
 
-
+GOOGLE_API_KEY = 'AIzaSyBSlidD-imxJWynXsX2Ie6T6exqGdhw3VM'
 
 # Application definition
 
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Codeforces',
     'accounts',
+    'Predictions',
 ]
 
 MIDDLEWARE = [
