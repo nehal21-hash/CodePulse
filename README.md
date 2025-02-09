@@ -37,7 +37,7 @@ Follow these steps to set up and run CodePulse locally:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/CodePulse.git
+   git clone https://github.com/nehal21-hash/CodePulse.git
    cd CodePulse
    ```
 
